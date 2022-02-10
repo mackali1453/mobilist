@@ -11,7 +11,7 @@ const router = Router(); //Router class allow us to associate our functions whic
 router.all("/login",controller.Login); //routes to leaflet map page
 router.all("/Register",controller.Register);
 router.all("/Add",async function(req,res)
-{
+{   //--------------------------authorization----------------------------------- 
     //  var validationResult = await AuthorizationModel.verify(req,res);
     //  if (validationResult.status_message==MetaModel.Success().status_message)
     //  {
@@ -27,7 +27,7 @@ router.all("/Add",async function(req,res)
  }
 );
 router.all("/Delete",async function(req,res)
-{
+{//--------------------------authorization----------------------------------- 
     //  var validationResult = await AuthorizationModel.verify(req,res);
     //  if (validationResult.status_message==MetaModel.Success().status_message)
     //  {
@@ -43,7 +43,7 @@ router.all("/Delete",async function(req,res)
  }
 );
 router.all("/Search",async function(req,res)
-{
+{//--------------------------authorization----------------------------------- 
     //  var validationResult = await AuthorizationModel.verify(req,res);
     //  if (validationResult.status_message==MetaModel.Success().status_message)
     //  {
@@ -58,7 +58,7 @@ router.all("/Search",async function(req,res)
 //          }
  });
 router.all("/Update",async function(req,res)
-{
+{//--------------------------authorization----------------------------------- 
     //  var validationResult = await AuthorizationModel.verify(req,res);
     //  if (validationResult.status_message==MetaModel.Success().status_message)
     //  {
