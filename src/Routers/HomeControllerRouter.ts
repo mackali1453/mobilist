@@ -12,18 +12,18 @@ router.all("/login",controller.Login); //routes to leaflet map page
 router.all("/Register",controller.Register);
 router.all("/Add",async function(req,res)
 {   //--------------------------JWT AUTHENTICATION----------------------------------- 
-    //  var validationResult = await AuthorizationModel.verify(req,res);
-    //  if (validationResult.status_message==MetaModel.Success().status_message)
-    //  {
+      var validationResult = await AuthorizationModel.verify(req,res);
+      if (validationResult.status_message==MetaModel.Success().status_message)
+      {
         
         controller.AddPerson(req,res)
         
-//      }
+      }
         
-//      else
-//          {
-//              res.send(BaseMetaModel.create(validationResult))
-//          }
+      else
+          {
+              res.send(BaseMetaModel.create(validationResult))
+          }
  }
 );
 router.all("/Delete",async function(req,res)
