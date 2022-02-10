@@ -40,4 +40,4 @@ user_email is there for users to distinguish their guides from each other.
 	"password":"123456"
 }.
 ```
-Login API returns a token. To access other API endpoints you must use that token in request header for authorization. But first you must comment codes in HomeControllerRouter.ts file.
+Login API returns a token. To access other API endpoints you must use that token in request header for authorization. But first you must remove comment lines in HomeControllerRouter.ts file.
