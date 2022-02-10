@@ -30,8 +30,8 @@ JSON requests for those API endpoints are all same ;
 ```
 user_email is there for users to distinguish their guides from each other.
 
-## Optional
-"localhost:8000/Register" and "localhost:8000/login" are two API endpoints for authentication and authorization. JSON requests for those API endpoints are all same ;
+## JWT AUTHENTICATION
+"localhost:8000/Register" and "localhost:8000/login" are two API endpoints for authentication. JSON requests for those API endpoints are all same ;
 ```bash
 {
 	"first_name":"melikşah",
@@ -40,4 +40,4 @@ user_email is there for users to distinguish their guides from each other.
 	"password":"123456"
 }.
 ```
-Login API returns a token. To access other API endpoints you must use that token in request header for authorization. But first you must remove comment lines in HomeControllerRouter.ts file.
+Login API returns a token. To access other API endpoints you must use that token in request header for authentication. But first you must remove comment lines in HomeControllerRouter.ts file.
