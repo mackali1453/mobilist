@@ -38,7 +38,6 @@ class LoginRequestModel extends ValidateUserModel{
               );
             console.log(token)
             var result = await context.ExecuteQuery(" UPDATE users SET token=? WHERE password=?",{"token":token,"password":this.password});
-            // sender.send("meliksah.tg@hotmail.com","iş görüşmesi","olumsuz");
             return BaseMetaModel.create(validationResult.meta,{"token":token});
         }
         else
